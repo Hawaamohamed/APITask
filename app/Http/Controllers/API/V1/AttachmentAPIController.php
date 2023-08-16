@@ -13,12 +13,7 @@ use App\Http\Requests\Admin\CreateAttachmentRequest;
 use Illuminate\Support\Facades\DB; 
 
 class AttachmentAPIController extends Controller
-{
-   
-    public function __construct()
-    {
-        $this->middleware('auth:api');
-    } 
+{ 
 
     public function index(Request $request)
     { 

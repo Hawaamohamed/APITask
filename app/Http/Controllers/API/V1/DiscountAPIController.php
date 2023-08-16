@@ -12,13 +12,13 @@ use App\Http\Requests\Admin\CreateDiscountRequest;
 use Illuminate\Support\Facades\DB; 
 
 class DiscountAPIController extends Controller
-{ 
+{  
 
-    public function __construct()
-    {
-      //  $this->middleware('auth:api');
+    public function __construct(){
+        
+        $this->middleware('auth:api');
     } 
-
+    
     public function index(Request $request)
     {
         $query = Discount::query();

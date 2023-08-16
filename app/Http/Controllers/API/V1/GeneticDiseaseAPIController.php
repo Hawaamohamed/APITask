@@ -13,16 +13,15 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class GeneticDiseaseAPIController extends Controller
-{ 
+{  
 
-    public function __construct()
-    {
+    public function __construct(){
+        
         $this->middleware('auth:api');
     } 
-
+    
     public function index(Request $request)
-    {
-
+    { 
         $query = GeneticDisease::query();
 
         if ($request->get('skip') && $request->get('limit')) {

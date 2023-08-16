@@ -14,11 +14,12 @@ use Illuminate\Support\Facades\Auth;
 
 class PharmaceuticalAPIController extends Controller
 {
-    
-    public function __construct()
-    {
+     
+    public function __construct(){
+        
         $this->middleware('auth:api');
     } 
+    
 
     public function index(Request $request)
     { 

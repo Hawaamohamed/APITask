@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class PreviousAnalysisAPIController extends Controller
-{
-   
-    public function __construct()
-    {
+{ 
+
+    public function __construct(){
+        
         $this->middleware('auth:api');
     } 
-
+    
     public function index(Request $request)
     { 
         $query = PreviousAnalysis::query();

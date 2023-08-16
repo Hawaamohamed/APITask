@@ -22,7 +22,8 @@ class UsersAPIController extends AppBaseController
 {
      
     public function __construct(){
-        $this->middleware('auth:api', ['except' => ['login', 'register', 'logout']]);
+        
+        $this->middleware('auth:api', ['except' => ['login', 'register']]);
     } 
 
     public function index(Request $request)
@@ -89,7 +90,7 @@ class UsersAPIController extends AppBaseController
 
     public function logout(){
         
-       // auth()->logout();
+        auth()->logout();
         return response()->json([
             'message' => "Logout successfully"
         ]);
